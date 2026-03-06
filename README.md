@@ -1,16 +1,49 @@
-# React + Vite
+# Cosmity — Constellation of Souls
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun vibe-coded compatibility web app that maps personality bonds between people using MBTI, Color Personality, Chinese Zodiac, and Western Horoscope.
 
-Currently, two official plugins are available:
+> Totally just for fun. No science was harmed in the making of this app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What it does
 
-## React Compiler
+Add up to 100 people with their personality traits and watch a cosmic web of compatibility scores render between them. Click any connection line to see a detailed breakdown of why two people vibe (or don't).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Compatibility factors:**
+- MBTI personality type
+- Color personality
+- Chinese Zodiac animal
+- Western Horoscope sign
 
-## Expanding the ESLint configuration
+**Features:**
+- Animated starfield background with dark/light theme toggle (defaults to dark)
+- Interactive compatibility web graph with color-coded tiers
+- Expand mode — blow up the graph to ~80% of your screen for a better view
+- Focus Mode for groups > 20 people (radial graph centered on one person)
+- Three tiers: **Perfect** / **Average** / **Disaster** with adjustable thresholds
+- All Pairings panel with collapsible tier sections
+- Import people from a public Google Sheet (paste the share URL)
+- Load demo data to try it out instantly
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Demo data (Google Sheet)
+
+Paste this URL into the "Import from Google Sheets" panel:
+
+```
+https://docs.google.com/spreadsheets/d/1W42ds3_tk2o41_dbBHJq5tTMMjnTvlrRZIXF5gEQxkI/edit?usp=sharing
+```
+
+Sheet format (Row 1 = header, columns can be in any order):
+
+| Name | MBTI | Color | Zodiac | Horoscope |
+|------|------|-------|--------|-----------|
+| Alice | INFJ | Red | Dragon | Scorpio |
+| ... | ... | ... | ... | ... |
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+Built with React + Vite.
