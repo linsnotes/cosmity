@@ -186,33 +186,6 @@ select optgroup {
   align-items: center;
 }
 
-/* ─── Responsive ─── */
-@media (max-width: 760px) {
-  .app-main {
-    flex-direction: column;
-    padding: 0 12px 40px;
-    gap: 20px;
-  }
-  .app-sidebar,
-  .app-graph-area {
-    flex: none;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .app-main {
-    padding: 0 10px 30px;
-  }
-  .theme-toggle {
-    top: auto;
-    bottom: auto;
-    position: static;
-    display: block;
-    margin: 0 auto 12px;
-  }
-}
-
 /* ─── Theme toggle button ─── */
 .theme-toggle {
   position: absolute;
@@ -233,4 +206,32 @@ select optgroup {
 .theme-toggle:hover {
   border-color: var(--accent-border);
   color: var(--accent);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 760px) {
+  header {
+    padding-top: 16px !important;
+  }
+  .app-main {
+    flex-direction: column;
+    padding: 0 12px 40px;
+    gap: 20px;
+  }
+  .app-sidebar,
+  .app-graph-area {
+    flex: none;
+    width: 100%;
+  }
+  .theme-toggle {
+    position: static;
+    display: block;
+    margin: 0 auto 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-main {
+    padding: 0 10px 30px;
+  }
 }
