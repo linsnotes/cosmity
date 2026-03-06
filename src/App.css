@@ -204,6 +204,13 @@ select optgroup {
   .app-main {
     padding: 0 10px 30px;
   }
+  .theme-toggle {
+    top: auto;
+    bottom: auto;
+    position: static;
+    display: block;
+    margin: 0 auto 12px;
+  }
 }
 
 /* ─── Theme toggle button ─── */
