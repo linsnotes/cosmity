@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;1,400&display=swap");
+
+/* ─── Animations ─── */
+@keyframes twinkle {
+  from {
+    opacity: var(--star-op-from, 0.1);
+  }
+  to {
+    opacity: var(--star-op-to, 0.4);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-border);
+  border-radius: 4px;
+}
+
+/* ─── Select options ─── */
+select option {
+  background: var(--select-bg);
+  color: var(--text-primary);
+}
+select optgroup {
+  background: var(--select-bg);
+}
+
+/* ─── Dark theme (default) ─── */
+:root {
+  --bg-page: #080916;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card2: rgba(255, 255, 255, 0.02);
+  --bg-input: rgba(255, 255, 255, 0.05);
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --bg-deep: #0a0b1e;
+  --bg-node: #0d0e22;
+  --bg-overlay: rgba(8, 9, 28, 0.96);
+  --bg-bar: rgba(255, 255, 255, 0.07);
+  --select-bg: #0d0e22;
+
+  --border-card: rgba(255, 255, 255, 0.08);
+  --border-card2: rgba(255, 255, 255, 0.07);
+  --border-faint: rgba(255, 255, 255, 0.06);
+  --border-input: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(212, 175, 55, 0.3);
+
+  --text-primary: #f5f5fa;
+  --text-secondary: rgba(255, 255, 255, 0.88);
+  --text-body: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.60);
+  --text-faint: rgba(255, 255, 255, 0.48);
+  --text-ultra-faint: rgba(255, 255, 255, 0.35);
+
+  --accent: #d4af37;
+  --accent-faint: rgba(212, 175, 55, 0.99);
+  --accent-border: rgba(212, 175, 55, 0.3);
+  --accent-bg: rgba(212, 175, 55, 0.12);
+  --accent-ring: rgba(212, 175, 55, 0.08);
+  --accent-glow: rgba(212, 175, 55, 0.2);
+
+  --mbti-bg: rgba(212, 175, 55, 0.12);
+  --mbti-border: rgba(212, 175, 55, 0.3);
+  --mbti-color: #d4af37;
+  --zodiac-bg: rgba(152, 251, 152, 0.1);
+  --zodiac-border: rgba(152, 251, 152, 0.3);
+  --zodiac-color: #98fb98;
+  --horoscope-bg: rgba(126, 200, 227, 0.1);
+  --horoscope-border: rgba(126, 200, 227, 0.3);
+  --horoscope-color: #7ec8e3;
+
+  --btn-add-color: #0a0b1e;
+  --btn-add-shadow: rgba(212, 175, 55, 0.3);
+
+  --star-color: white;
+  --graph-ring: rgba(212, 175, 55, 0.08);
+  --graph-ring-outer: rgba(212, 175, 55, 0.04);
+
+  --toggle-bg: rgba(255, 255, 255, 0.08);
+  --toggle-border: rgba(255, 255, 255, 0.15);
+  --toggle-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ─── Light theme ─── */
+[data-theme="light"] {
+  --bg-page: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card2: #f2f2f7;
+  --bg-input: #f2f2f7;
+  --bg-hover: rgba(0, 0, 0, 0.05);
+  --bg-deep: #1d1d1f;
+  --bg-node: #e8e8ed;
+  --bg-overlay: rgba(255, 255, 255, 0.97);
+  --bg-bar: rgba(0, 0, 0, 0.08);
+  --select-bg: #ffffff;
+
+  --border-card: rgba(0, 0, 0, 0.08);
+  --border-card2: rgba(0, 0, 0, 0.06);
+  --border-faint: rgba(0, 0, 0, 0.05);
+  --border-input: rgba(0, 0, 0, 0.14);
+  --border-hover: rgba(0, 113, 227, 0.4);
+
+  --text-primary: #0a0a0a;
+  --text-secondary: #1d1d1d;
+  --text-body: #333333;
+  --text-muted: #4a4a4f;
+  --text-faint: #5a5a60;
+  --text-ultra-faint: #6e6e73;
+
+  --accent: #8b6510;
+  --accent-faint: rgba(139, 101, 16, 0.8);
+  --accent-border: rgba(139, 101, 16, 0.3);
+  --accent-bg: rgba(139, 101, 16, 0.08);
+  --accent-ring: rgba(139, 101, 16, 0.06);
+  --accent-glow: rgba(139, 101, 16, 0.12);
+
+  --mbti-bg: rgba(139, 101, 16, 0.08);
+  --mbti-border: rgba(139, 101, 16, 0.25);
+  --mbti-color: #7a5a0a;
+  --zodiac-bg: rgba(52, 199, 89, 0.1);
+  --zodiac-border: rgba(52, 199, 89, 0.3);
+  --zodiac-color: #1a7a3a;
+  --horoscope-bg: rgba(0, 122, 255, 0.08);
+  --horoscope-border: rgba(0, 122, 255, 0.25);
+  --horoscope-color: #0055cc;
+
+  --btn-add-color: #ffffff;
+  --btn-add-shadow: rgba(139, 101, 16, 0.25);
+
+  --star-color: #c7c7cc;
+  --graph-ring: rgba(0, 0, 0, 0.07);
+  --graph-ring-outer: rgba(0, 0, 0, 0.04);
+
+  --toggle-bg: rgba(0, 0, 0, 0.06);
+  --toggle-border: rgba(0, 0, 0, 0.12);
+  --toggle-color: #515154;
+}
+
+/* ─── Layout containers ─── */
+.app-main {
+  position: relative;
+  z-index: 1;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.app-sidebar {
+  flex: 0 0 340px;
+  min-width: 0;
+}
+
+.app-graph-area {
+  flex: 1 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 760px) {
+  .app-main {
+    flex-direction: column;
+    padding: 0 12px 40px;
+    gap: 20px;
+  }
+  .app-sidebar,
+  .app-graph-area {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-main {
+    padding: 0 10px 30px;
+  }
+}
+
+/* ─── Theme toggle button ─── */
+.theme-toggle {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: var(--toggle-bg);
+  border: 1px solid var(--toggle-border);
+  border-radius: 20px;
+  padding: 6px 14px;
+  color: var(--toggle-color);
+  font-size: 12px;
+  font-family: "Cinzel", serif;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  z-index: 10;
+}
+.theme-toggle:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
