@@ -1423,8 +1423,8 @@ export default function App() {
   });
   const [selectedPair, setSelectedPair] = useState(null);
   const [error, setError] = useState("");
-  const [highThreshold, setHighThreshold] = useState(72);
-  const [lowThreshold, setLowThreshold] = useState(58);
+  const [highThreshold, setHighThreshold] = useState(75);
+  const [lowThreshold, setLowThreshold] = useState(40);
   const [tiersOpen, setTiersOpen] = useState({ connections: true, compatible: true, challenging: false });
   const [focusPerson, setFocusPerson] = useState(null);
   const [sheetUrl, setSheetUrl] = useState("");
